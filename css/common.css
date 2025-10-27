@@ -1,0 +1,113 @@
+/* 公共部分 */
+.w {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #273236;
+}
+
+/* 头部 */
+/* 快捷导航 */
+.shortcut {
+  background-color: #202223;
+  height: 80px;
+}
+
+.shortcut-toll {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shortcut-left h2 {
+  line-height: 80px;
+  color: #e5f2f6;
+  margin-left: 20px;
+  font-size: 26px;
+}
+
+.shortcut-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.shortcut-right ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 80px;
+}
+
+.shortcut-right li {
+  margin: 0 10px;
+}
+
+.shortcut-right li a {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.shortcut-right li a span {
+  font-size: 20px;
+}
+
+.shortcut-right li:last-child {
+  margin-right: 15px;
+}
+
+
+
+.shortcut-right li a:hover {
+  color: #aac7d9;
+  /* 下边框距离文字10px */
+  padding-bottom: 25px;
+  border-bottom: 2px solid #aac7d9;
+}
+
+.shortcut-right li.line {
+  width: 1px;
+  height: 18px;
+  background-color: #999999;
+  margin: 0 20px;
+}
+
+/* banner */
+.banner {
+  background-color: #273236;
+}
+
+.banner .pic {
+  height: 550px;
+  background-image: url(../images/banner.jpg);
+  background-position: 0 -200px;
+  background-size: cover;
+}
+
+.connect {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: auto;
+  height: auto;
+}
+
+
+/* 尾部 */
+.footer {
+  height: 60px;
+  background-color: #566066;
+}
+
+.footer .w {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .w p {
+  font-size: 18px;
+  line-height: 60px;
+  color: #c1c1c1;
+}

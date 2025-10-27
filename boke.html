@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人空间</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/boke.css">
+  <link rel="stylesheet" href="./iconfont/iconfont.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <!-- 快捷导航 -->
+  <div class="shortcut">
+    <div class="w">
+      <div class="shortcut-toll">
+        <div class="shortcut-left">
+          <h2>个人空间</h2>
+        </div>
+        <div class="shortcut-right">
+          <ul>
+            <li><a href="index.html" class="one">
+                <span class="iconfont icon-shouye2-weixuanzhong"></span>
+                主页</a></li>
+            <li class="line"></li>
+            <li><a href="xiangmu.html" class="two"><span class="iconfont icon-zixun1-weixuanzhong">
+                </span>
+                项目</a></li>
+            <li class="line"></li>
+            <li><a href="boke.html" class="three"><span class="iconfont icon-zixun2-xuanzhong"></span>
+                博客</a></li>
+            <li class="line"></li>
+            <li><a href="lianxi.html" class="four"><span class="iconfont icon-wode2-weixuanzhong"></span>
+                联系</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- banner -->
+  <div class="banner">
+    <div class="w">
+      <div class="pic">
+      </div>
+    </div>
+  </div>
+
+  <!-- 内容 -->
+  <div class="body">
+
+    <div class="w">
+      <div class="connect">
+        <div class="blog-container">
+          <!-- 开发日志部分 -->
+          <div class="blog-section">
+            <h3><span class="iconfont icon-rizhi"></span> 开发日志</h3>
+            <!-- 日志1 -->
+            <div class="dev-log-item">
+              <h4 class="log-title">CSS样式布局问题</h4>
+              <span class="log-date">2025-10-25</span>
+              <p class="log-content">在开发过程中遇到了CSS盒模型和定位的问题，特别是在响应式布局方面。</p>
+              <button class="detail-btn">查看详情 <span class="iconfont icon-jiantou1"></span></button>
+              <div class="log-solution" style="display: none;">
+                <h5 class="solution-title">解决步骤：</h5>
+                <ol class="solution-steps">
+                  <li>分析问题：识别不同屏幕尺寸下元素错位和溢出的具体表现</li>
+                  <li>查阅文档：学习CSS Grid和Flexbox布局的核心概念和属性</li>
+                  <li>重构布局：将传统的float布局替换为grid和flex组合方案</li>
+                  <li>添加媒体查询：针对不同断点设置合适的列数和间距</li>
+                  <li>测试验证：在多种设备和浏览器上进行兼容性测试</li>
+                  <li>优化调整：根据测试结果微调样式参数，确保视觉一致性</li>
+                </ol>
+              </div>
+            </div>
+            <!-- 日志2 -->
+            <div class="dev-log-item">
+              <h4 class="log-title">JavaScript交互效果实现</h4>
+              <span class="log-date">2025-10-27</span>
+              <p class="log-content">为按钮和卡片添加悬停效果时，需要注意过渡动画的平滑性。</p>
+              <button class="detail-btn">查看详情 <span class="iconfont icon-jiantou1"></span></button>
+              <div class="log-solution" style="display: none;">
+                <h5 class="solution-title">解决步骤：</h5>
+                <ol class="solution-steps">
+                  <li>确定交互元素：识别需要添加悬停效果的UI组件</li>
+                  <li>设计动画效果：规划缩放、颜色变化、阴影等视觉反馈</li>
+                  <li>添加过渡属性：为所有变化的属性设置统一的transition时间（0.3s）</li>
+                  <li>调整时间曲线：使用ease-out使动画开始较快，结束较慢</li>
+                  <li>实现延迟效果：为不同属性设置stagger delay，创建层次感</li>
+                  <li>性能优化：避免在动画中改变position、width等触发重排的属性</li>
+                </ol>
+              </div>
+            </div>
+            <!-- 日志3 -->
+          </div>
+
+          <!-- 我的文章部分 -->
+          <div class="blog-section">
+            <h3><span class="iconfont icon-wenzhang"></span> 我的文章</h3>
+            <!-- 文章1 -->
+            <div class="article-item">
+              <h4 class="article-title">CSS高级动画技巧总结</h4>
+              <span class="article-date">2025-10-26</span>
+              <p class="article-content">
+                本文总结了CSS动画的高级技巧，包括keyframes动画序列、transform变换组合、transition过渡效果的精细控制等...</p>
+              <div class="article-actions">
+                <div class="article-tags">
+                  <span class="article-tag">CSS</span>
+                  <span class="article-tag">动画</span>
+                  <span class="article-tag">前端</span>
+                </div>
+                <button class="article-detail-btn">阅读全文 <span class="iconfont icon-jiantouyou"></span></button>
+              </div>
+              <div class="article-full-content" style="display: none;">
+                <p class="full-text">
+                  掌握高级技巧的核心是打破单一属性变化，通过组合与控制实现更细腻、更贴近自然的动画效果。
+
+                  1. 多属性与分层动画：避免“僵硬感”
+
+                  核心是用 animation 或 transition 同时控制多个属性，并为不同元素设置不同延迟，模拟真实世界的运动层次。
+
+                  • 示例：按钮hover时，背景色（0ms延迟）、缩放（100ms延迟）、阴影（200ms延迟）依次变化，而非同步动。
+
+                  • 关键代码：transition: background 0.3s, transform 0.3s 0.1s, box-shadow 0.3s 0.2s;
+
+                  2. 贝塞尔曲线：自定义动画“节奏”
+
+                  cubic-bezier() 是控制动画速度曲线的核心，能实现“先快后慢”“回弹”等非匀速效果，替代默认的 ease。
+
+                  • 常用实用曲线：
+
+                  ◦ 轻微回弹：cubic-bezier(0.17, 0.67, 0.83, 0.67)（适合卡片弹出）
+
+                  ◦ 快速启动：cubic-bezier(0.22, 1, 0.36, 1)（适合按钮点击）
+
+                  • 工具推荐：使用 cubic-bezier.com 可视化调试曲线。
+
+                  3. 关键帧（@keyframes）进阶：精细控制每一步
+
+                  不局限于“开始-结束”两帧，在 @keyframes 中插入中间帧，实现复杂运动路径或状态变化。
+
+                  • 示例：小球弹跳动画，在50%帧设置 transform: scale(1.1, 0.9)（落地压扁），100%帧恢复原大小，模拟真实弹跳形变。
+
+                  • 关键代码：
+                  @keyframes bounce {
+                  0% { transform: translateY(0); }
+                  50% { transform: translateY(100px) scale(1.1, 0.9); }
+                  100% { transform: translateY(0); }
+                  }
+                  4. 硬件加速：解决“卡顿”问题
+
+                  通过触发浏览器GPU渲染，提升动画流畅度，尤其适合高频变化的元素（如旋转、缩放）。
+
+                  • 触发方式：为动画元素添加 transform: translateZ(0) 或 will-change: transform（提前告知浏览器准备优化）。
+
+                  • 注意：避免滥用，过多GPU加速会占用额外内存。
+
+                  5. 动画组合：实现“复合效果”
+
+                  将多个独立动画通过 animation 合并，用逗号分隔，实现更丰富的视觉表现。
+
+                  • 示例：图标同时旋转（spin动画）+ 闪烁（flash动画），关键代码：animation: spin 2s linear infinite, flash 1s ease infinite;
+                </p>
+              </div>
+            </div>
+            <!-- 文章2 -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 尾部 -->
+  <footer class="footer ">
+    <div class="w">
+      <p>© 版权所有 2025 宁妍 的个人博客</p>
+    </div>
+  </footer>
+
+  <script>
+    // 获取所有详情按钮
+    const detailBtns = document.querySelectorAll('.detail-btn');
+    const articleDetailBtns = document.querySelectorAll('.article-detail-btn');
+
+    // 为开发日志详情按钮添加点击事件
+    detailBtns.forEach(btn => {
+      btn.addEventListener('click', function () {
+        // 找到对应的解决步骤容器
+        const solutionDiv = this.nextElementSibling;
+
+        // 切换显示状态
+        if (solutionDiv.style.display === 'none') {
+          solutionDiv.style.display = 'block';
+          this.classList.add('active');
+        } else {
+          solutionDiv.style.display = 'none';
+          this.classList.remove('active');
+        }
+      });
+    });
+
+    // 为文章详情按钮添加点击事件
+    articleDetailBtns.forEach(btn => {
+      btn.addEventListener('click', function () {
+        // 找到对应的完整内容容器 - 通过父元素查找
+        const articleItem = this.closest('.article-item');
+        const fullContentDiv = articleItem.querySelector('.article-full-content');
+
+        // 切换显示状态
+        if (fullContentDiv.style.display === 'none') {
+          fullContentDiv.style.display = 'block';
+          this.classList.add('active');
+          this.innerHTML = '收起内容 <span class="iconfont icon-jiantouyou"></span>';
+        } else {
+          fullContentDiv.style.display = 'none';
+          this.classList.remove('active');
+          this.innerHTML = '阅读全文 <span class="iconfont icon-jiantouyou"></span>';
+        }
+      });
+    });
+  </script>
+
+</html>

@@ -1,0 +1,79 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "45867299",
+      "name": "首页2-选中",
+      "font_class": "shouye2-xuanzhong",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "45867300",
+      "name": "首页2-未选中",
+      "font_class": "shouye2-weixuanzhong",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "45867315",
+      "name": "我的2-选中",
+      "font_class": "wode2-xuanzhong",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "45867316",
+      "name": "我的2-未选中",
+      "font_class": "wode2-weixuanzhong",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "45867324",
+      "name": "知识-未选中",
+      "font_class": "zhishi-weixuanzhong",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "45867325",
+      "name": "知识-选中",
+      "font_class": "zhishi-xuanzhong",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "45867328",
+      "name": "资讯1-未选中",
+      "font_class": "zixun1-weixuanzhong",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "45867329",
+      "name": "资讯1-选中",
+      "font_class": "zixun1-xuanzhong",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "45867331",
+      "name": "资讯2-选中",
+      "font_class": "zixun2-xuanzhong",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "45867332",
+      "name": "资讯2-未选中",
+      "font_class": "zixun2-weixuanzhong",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    }
+  ]
+}

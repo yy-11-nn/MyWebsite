@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人空间</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/xiangmu.css">
+  <link rel="stylesheet" href="./iconfont/iconfont.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <!-- 快捷导航 -->
+  <div class="shortcut">
+    <div class="w">
+      <div class="shortcut-toll">
+        <div class="shortcut-left">
+          <h2>个人空间</h2>
+        </div>
+        <div class="shortcut-right">
+          <ul>
+            <li><a href="index.html" class="one">
+                <span class="iconfont icon-shouye2-weixuanzhong"></span>
+                主页</a></li>
+            <li class="line"></li>
+            <li><a href="xiangmu.html" class="two"><span class="iconfont icon-zixun1-xuanzhong">
+                </span>
+                项目</a></li>
+            <li class="line"></li>
+            <li><a href="boke.html" class="three"><span class="iconfont icon-zixun2-weixuanzhong"></span>
+                博客</a></li>
+            <li class="line"></li>
+            <li><a href="lianxi.html" class="four"><span class="iconfont icon-wode2-weixuanzhong"></span>
+                联系</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- banner -->
+  <div class="banner">
+    <div class="w">
+      <div class="pic">
+      </div>
+    </div>
+  </div>
+
+  <!-- 内容 -->
+  <div class="body">
+    <div class="w">
+      <div class="connect">
+        <!-- 项目标题 -->
+        <h2 class="project-title">项目</h2>
+
+        <!-- 项目列表 -->
+        <div class="project-list">
+          <!-- 项目1 -->
+          <div class="project-item">
+            <div class="project-header">
+              <h3 class="project-name">练习-小兔鲜儿网页首页制作</h3>
+              <span class="project-date">2025年10月</span>
+            </div>
+            <div class="project-conference"></div>
+            <!-- <div class="project-authors">宁妍</div> -->
+            <div class="project-description">
+              小兔鲜儿网页首页项目是面向前端学习者的开源实战项目，模拟生鲜电商界面。其页面布局包括快捷导航、banner图、新鲜好物、生鲜、尾部版权等部分。采用模块化布局，以“xtx_”为前缀命名，运用语义化标签，通过精灵图优化性能，展示了商品图片、名称、价格等信息，适合初学者学习前端基础知识。
+            </div>
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="small-tag">网页</span>
+                <span class="small-tag">css</span>
+                <span class="small-tag">html</span>
+              </div>
+              <button class="detail-btn">详情</button>
+            </div>
+          </div>
+          <!-- 项目2 -->
+          <div class="project-item">
+            <div class="project-header">
+              <h3 class="project-name">敬请期待</h3>
+              <span class="project-date">x年x月</span>
+            </div>
+            <div class="project-conference"></div>
+            <!-- <div class="project-authors">宁妍</div> -->
+            <div class="project-description">
+              敬请期待
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 尾部 -->
+    <footer class="footer ">
+      <div class="w">
+        <p>© 版权所有 2025 宁妍 的个人博客</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const detailBtns = document.querySelectorAll('.detail-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+
+        // 详情按钮点击事件
+        detailBtns.forEach(btn => {
+          btn.addEventListener('click', function () {
+            const projectName = this.closest('.project-item').querySelector('.project-name').textContent;
+            alert(`查看项目详情: ${projectName}\n(功能开发中)`);
+          });
+        });
+
+        // 添加简单的页面加载动画
+        projectItems.forEach((item, index) => {
+          item.style.opacity = '0';
+          item.style.transform = 'translateY(20px)';
+          item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+
+          setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0)';
+          }, 100 + index * 150);
+        });
+      });
+    </script>
+
+</html>
