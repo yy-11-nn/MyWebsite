@@ -14,6 +14,19 @@
   <link rel="stylesheet" href="./iconfont/iconfont.css">
   <link rel="stylesheet" href="./css/jiazai.css">
   <!-- 延迟加载JavaScript，确保DOM完全加载 -->
+  <style>
+    loader {
+      display: fixed;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    content {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -182,6 +195,13 @@
       </g>
     </svg>
   </div>
+  <script>
+    window.addEventListener('load', function () {
+      document.getElementById('toggle').addEventListener('change', function () {
+        document.querySelector('.menu-tooltip').classList.toggle('active');
+      });
+    });
+  </script>
 
   <!-- 头部 -->
   <!-- 快捷导航 -->
