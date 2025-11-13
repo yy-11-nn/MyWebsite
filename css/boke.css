@@ -214,8 +214,8 @@
 .article-detail-btn:hover {
   background-color: #aac7d9;
   color: #202223;
-  border-bottom-color: #202223;
   letter-spacing: 1px;
+  border-radius: 20px;
 }
 
 .article-detail-btn.active {

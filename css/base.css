@@ -33,6 +33,21 @@ a {
 /* 设置img的垂直对齐方式为居中对齐，去除img默认下间隙 */
 img {
   vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 响应式图片设置 */
+@media (max-width: 768px) {
+  img {
+    max-width: 100%;
+  }
+}
+
+/* 响应式SVG设置 */
+svg {
+  max-width: 100%;
+  height: auto;
 }
 
 /* 去除input默认样式 */

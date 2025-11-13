@@ -3,15 +3,186 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="MobileOptimized" content="width">
+  <meta name="theme-color" content="#273236">
   <title>个人空间</title>
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./iconfont/iconfont.css">
+  <link rel="stylesheet" href="./css/jiazai.css">
+  <!-- 延迟加载JavaScript，确保DOM完全加载 -->
 </head>
 
 <body>
+  <!-- 加载界面 -->
+  <div class="loader">
+    <svg id="pegtopone" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 100 100">
+      <defs>
+        <filter id="shine">
+          <feGaussianBlur stdDeviation="3"></feGaussianBlur>
+        </filter>
+        <mask id="mask">
+          <path
+            d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+            fill="white"></path>
+        </mask>
+        <radialGradient id="gradient-1" cx="50" cy="66" fx="50" fy="66" r="30"
+          gradientTransform="translate(0 35) scale(1 0.5)" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="black" stop-opacity="0.3"></stop>
+          <stop offset="50%" stop-color="black" stop-opacity="0.1"></stop>
+          <stop offset="100%" stop-color="black" stop-opacity="0"></stop>
+        </radialGradient>
+        <radialGradient id="gradient-2" cx="55" cy="20" fx="55" fy="20" r="30" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="white" stop-opacity="0.3"></stop>
+          <stop offset="50%" stop-color="white" stop-opacity="0.1"></stop>
+          <stop offset="100%" stop-color="white" stop-opacity="0"></stop>
+        </radialGradient>
+        <radialGradient id="gradient-3" cx="85" cy="50" fx="85" fy="50" xlink:href="#gradient-2"></radialGradient>
+        <radialGradient id="gradient-4" cx="50" cy="58" fx="50" fy="58" r="60"
+          gradientTransform="translate(0 47) scale(1 0.2)" xlink:href="#gradient-3"></radialGradient>
+        <linearGradient id="gradient-5" x1="50" y1="90" x2="50" y2="10" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="black" stop-opacity="0.2"></stop>
+          <stop offset="40%" stop-color="black" stop-opacity="0"></stop>
+        </linearGradient>
+      </defs>
+      <g>
+        <path
+          d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+          fill="currentColor"></path>
+        <path
+          d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+          fill="url(#gradient-1)"></path>
+        <path
+          d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+          fill="none" stroke="white" opacity="0.3" stroke-width="3" filter="url(#shine)" mask="url(#mask)"></path>
+        <path
+          d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+          fill="url(#gradient-2)"></path>
+        <path
+          d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+          fill="url(#gradient-3)"></path>
+        <path
+          d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+          fill="url(#gradient-4)"></path>
+        <path
+          d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+          fill="url(#gradient-5)"></path>
+      </g>
+    </svg>
+    <svg id="pegtoptwo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 100 100">
+      <defs>
+        <filter id="shine">
+          <feGaussianBlur stdDeviation="3"></feGaussianBlur>
+        </filter>
+        <mask id="mask">
+          <path
+            d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+            fill="white"></path>
+        </mask>
+        <radialGradient id="gradient-1" cx="50" cy="66" fx="50" fy="66" r="30"
+          gradientTransform="translate(0 35) scale(1 0.5)" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="black" stop-opacity="0.3"></stop>
+          <stop offset="50%" stop-color="black" stop-opacity="0.1"></stop>
+          <stop offset="100%" stop-color="black" stop-opacity="0"></stop>
+        </radialGradient>
+        <radialGradient id="gradient-2" cx="55" cy="20" fx="55" fy="20" r="30" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="white" stop-opacity="0.3"></stop>
+          <stop offset="50%" stop-color="white" stop-opacity="0.1"></stop>
+          <stop offset="100%" stop-color="white" stop-opacity="0"></stop>
+        </radialGradient>
+        <radialGradient id="gradient-3" cx="85" cy="50" fx="85" fy="50" xlink:href="#gradient-2"></radialGradient>
+        <radialGradient id="gradient-4" cx="50" cy="58" fx="50" fy="58" r="60"
+          gradientTransform="translate(0 47) scale(1 0.2)" xlink:href="#gradient-3"></radialGradient>
+        <linearGradient id="gradient-5" x1="50" y1="90" x2="50" y2="10" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="black" stop-opacity="0.2"></stop>
+          <stop offset="40%" stop-color="black" stop-opacity="0"></stop>
+        </linearGradient>
+      </defs>
+      <g>
+        <path
+          d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+          fill="currentColor"></path>
+        <path
+          d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+          fill="url(#gradient-1)"></path>
+        <path
+          d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+          fill="none" stroke="white" opacity="0.3" stroke-width="3" filter="url(#shine)" mask="url(#mask)"></path>
+        <path
+          d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+          fill="url(#gradient-2)"></path>
+        <path
+          d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+          fill="url(#gradient-3)"></path>
+        <path
+          d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+          fill="url(#gradient-4)"></path>
+        <path
+          d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+          fill="url(#gradient-5)"></path>
+      </g>
+    </svg>
+    <svg id="pegtopthree" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 100 100">
+      <defs>
+        <filter id="shine">
+          <feGaussianBlur stdDeviation="3"></feGaussianBlur>
+        </filter>
+        <mask id="mask">
+          <path
+            d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+            fill="white"></path>
+        </mask>
+        <radialGradient id="gradient-1" cx="50" cy="66" fx="50" fy="66" r="30"
+          gradientTransform="translate(0 35) scale(1 0.5)" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="black" stop-opacity="0.3"></stop>
+          <stop offset="50%" stop-color="black" stop-opacity="0.1"></stop>
+          <stop offset="100%" stop-color="black" stop-opacity="0"></stop>
+        </radialGradient>
+        <radialGradient id="gradient-2" cx="55" cy="20" fx="55" fy="20" r="30" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="white" stop-opacity="0.3"></stop>
+          <stop offset="50%" stop-color="white" stop-opacity="0.1"></stop>
+          <stop offset="100%" stop-color="white" stop-opacity="0"></stop>
+        </radialGradient>
+        <radialGradient id="gradient-3" cx="85" cy="50" fx="85" fy="50" xlink:href="#gradient-2"></radialGradient>
+        <radialGradient id="gradient-4" cx="50" cy="58" fx="50" fy="58" r="60"
+          gradientTransform="translate(0 47) scale(1 0.2)" xlink:href="#gradient-3"></radialGradient>
+        <linearGradient id="gradient-5" x1="50" y1="90" x2="50" y2="10" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="black" stop-opacity="0.2"></stop>
+          <stop offset="40%" stop-color="black" stop-opacity="0"></stop>
+        </linearGradient>
+      </defs>
+      <g>
+        <path
+          d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+          fill="currentColor"></path>
+        <path
+          d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+          fill="url(#gradient-1)"></path>
+        <path
+          d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+          fill="none" stroke="white" opacity="0.3" stroke-width="3" filter="url(#shine)" mask="url(#mask)"></path>
+        <path
+          d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+          fill="url(#gradient-2)"></path>
+        <path
+          d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+          fill="url(#gradient-3)"></path>
+        <path
+          d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+          fill="url(#gradient-4)"></path>
+        <path
+          d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+          fill="url(#gradient-5)"></path>
+      </g>
+    </svg>
+  </div>
+
   <!-- 头部 -->
   <!-- 快捷导航 -->
   <div class="shortcut">
@@ -50,68 +221,111 @@
 
   <!-- 内容 -->
   <div class="body">
-
-    <!-- 自我介绍 -->
     <div class="connect">
       <div class="w">
+        <!-- 自我介绍 -->
         <div class="self-introduction">
-          <div class="self-left">
-            <img src="./images/self.jpg" alt="宁妍">
-            <h2>宁妍</h2>
-            <ul>
-              <li>性别：女</li>
-              <li>所在城市：湖南长沙</li>
-              <li>专业：大数据管理与应用</li>
-              <li>年级：2024级</li>
-            </ul>
+          <div class="self-top">
+            <div class="profile-image">
+              <img src="./images/self.jpg" alt="宁妍">
+            </div>
+            <h1>宁妍</h1>
+            <p class="profile-description">大数据管理与应用 | 2024级</p>
+            <p class="profile-description">-每天都是最好的自己-</p>
+
           </div>
-          <div class="self-right">
+          <div class="self-bottom">
             <p class="title">技能点</p>
             <div class="hobby">
               <ul>
                 <li>
                   <span class="skill-name">HTML5</span>
-                  <div class="progress-bar">
-                    <div class="progress" style="width: 90%"></div>
+                  <div class="circle-progress">
+                    <svg class="circle-progress-svg" width="120" height="120">
+                      <circle class="circle-bg" cx="60" cy="60" r="50" fill="none" />
+                      <circle class="circle-progress-bar" cx="60" cy="60" r="50" fill="none" stroke-dasharray="314.16"
+                        stroke-dashoffset="31.42" data-percent="90" />
+                    </svg>
+                    <span class="skill-percentage">90%</span>
                   </div>
                 </li>
                 <li>
                   <span class="skill-name">CSS3</span>
-                  <div class="progress-bar">
-                    <div class="progress" style="width: 70%"></div>
+                  <div class="circle-progress">
+                    <svg class="circle-progress-svg" width="120" height="120">
+                      <circle class="circle-bg" cx="60" cy="60" r="50" fill="none" />
+                      <circle class="circle-progress-bar" cx="60" cy="60" r="50" fill="none" stroke-dasharray="314.16"
+                        stroke-dashoffset="94.25" data-percent="70" />
+                    </svg>
+                    <span class="skill-percentage">70%</span>
                   </div>
                 </li>
                 <li>
                   <span class="skill-name">JavaScript</span>
-                  <div class="progress-bar">
-                    <div class="progress" style="width: 50%"></div>
+                  <div class="circle-progress">
+                    <svg class="circle-progress-svg" width="120" height="120">
+                      <circle class="circle-bg" cx="60" cy="60" r="50" fill="none" />
+                      <circle class="circle-progress-bar" cx="60" cy="60" r="50" fill="none" stroke-dasharray="314.16"
+                        stroke-dashoffset="157.08" data-percent="50" />
+                    </svg>
+                    <span class="skill-percentage">50%</span>
                   </div>
                 </li>
                 <li>
                   <span class="skill-name">C语言</span>
-                  <div class="progress-bar">
-                    <div class="progress" style="width: 75%"></div>
+                  <div class="circle-progress">
+                    <svg class="circle-progress-svg" width="120" height="120">
+                      <circle class="circle-bg" cx="60" cy="60" r="50" fill="none" />
+                      <circle class="circle-progress-bar" cx="60" cy="60" r="50" fill="none" stroke-dasharray="314.16"
+                        stroke-dashoffset="78.54" data-percent="75" />
+                    </svg>
+                    <span class="skill-percentage">75%</span>
                   </div>
                 </li>
                 <li>
                   <span class="skill-name">Python</span>
-                  <div class="progress-bar">
-                    <div class="progress" style="width: 70%"></div>
+                  <div class="circle-progress">
+                    <svg class="circle-progress-svg" width="120" height="120">
+                      <circle class="circle-bg" cx="60" cy="60" r="50" fill="none" />
+                      <circle class="circle-progress-bar" cx="60" cy="60" r="50" fill="none" stroke-dasharray="314.16"
+                        stroke-dashoffset="94.25" data-percent="70" />
+                    </svg>
+                    <span class="skill-percentage">70%</span>
                   </div>
                 </li>
                 <li>
                   <span class="skill-name">建模</span>
-                  <div class="progress-bar">
-                    <div class="progress" style="width: 40%"></div>
+                  <div class="circle-progress">
+                    <svg class="circle-progress-svg" width="120" height="120">
+                      <circle class="circle-bg" cx="60" cy="60" r="50" fill="none" />
+                      <circle class="circle-progress-bar" cx="60" cy="60" r="50" fill="none" stroke-dasharray="314.16"
+                        stroke-dashoffset="188.5" data-percent="40" />
+                    </svg>
+                    <span class="skill-percentage">40%</span>
                   </div>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-
+        <!-- 学习记录 -->
+        <div class="study-records">
+          <div class="record-card">
+            <h2>学习记录</h2>
+            <div class="record-form">
+              <input type="text" id="studyInput" placeholder="在这记录今天学了什么哦~">
+              <button id="submitBtn">提交</button>
+            </div>
+            <div class="records-section">
+              <ul id="recordsList"></ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
+
+    <script src="./js/index.js"></script>
 </body>
 
 <!-- 尾部 -->

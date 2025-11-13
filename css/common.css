@@ -1,7 +1,23 @@
 /* 公共部分 */
 .w {
-  width: 1440px;
+  width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* 响应式断点 */
+@media (max-width: 768px) {
+  .w {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .w {
+    padding: 0 10px;
+  }
 }
 
 body {
@@ -13,12 +29,14 @@ body {
 .shortcut {
   background-color: #202223;
   height: 80px;
+  position: relative;
 }
 
 .shortcut-toll {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 
 .shortcut-left h2 {
@@ -47,6 +65,7 @@ body {
 .shortcut-right li a {
   font-size: 20px;
   color: #ffffff;
+  transition: all 0.3s ease;
 }
 
 .shortcut-right li a span {
@@ -57,11 +76,8 @@ body {
   margin-right: 15px;
 }
 
-
-
 .shortcut-right li a:hover {
   color: #aac7d9;
-  /* 下边框距离文字10px */
   padding-bottom: 25px;
   border-bottom: 2px solid #aac7d9;
 }
@@ -73,6 +89,61 @@ body {
   margin: 0 20px;
 }
 
+/* 移动端导航栏适配 */
+@media (max-width: 768px) {
+  .shortcut {
+    height: 60px;
+  }
+
+  .shortcut-left h2 {
+    line-height: 60px;
+    font-size: 20px;
+    margin-left: 10px;
+  }
+
+  .shortcut-right ul {
+    height: 60px;
+  }
+
+  .shortcut-right li a {
+    font-size: 16px;
+  }
+
+  .shortcut-right li a span {
+    font-size: 16px;
+  }
+
+  .shortcut-right li.line {
+    margin: 0 10px;
+  }
+
+  .shortcut-right li a:hover {
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shortcut-left h2 {
+    font-size: 18px;
+  }
+
+  .shortcut-right li {
+    margin: 0 5px;
+  }
+
+  .shortcut-right li a {
+    font-size: 14px;
+  }
+
+  .shortcut-right li a span {
+    font-size: 14px;
+  }
+
+  .shortcut-right li.line {
+    margin: 0 5px;
+  }
+}
+
 /* banner */
 .banner {
   background-color: #273236;
@@ -81,8 +152,31 @@ body {
 .banner .pic {
   height: 550px;
   background-image: url(../images/banner.jpg);
-  background-position: 0 -200px;
+  background-position: 0 -120px;
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* 移动端banner适配 */
+@media (max-width: 992px) {
+  .banner .pic {
+    height: 500px;
+    background-position: center center;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner .pic {
+    height: 400px;
+    background-position: center center;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner .pic {
+    height: 300px;
+    background-position: center center;
+  }
 }
 
 .connect {
@@ -110,4 +204,118 @@ body {
   font-size: 18px;
   line-height: 60px;
   color: #c1c1c1;
+}
+
+/* From Uiverse.io by 20essentials */
+.menu-tooltip {
+  --toggle-color: #fff;
+  --item-1-gradient: linear-gradient(45deg, #566066, #c1c1c1);
+  width: 180px;
+  height: 180px;
+  position: fixed;
+  bottom: 300px;
+  right: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+
+  .toggle {
+    width: 50px;
+    height: 50px;
+    background-color: var(--toggle-color);
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+    font-size: 1.8em;
+    z-index: 999;
+    position: absolute;
+    transition: transform 1.2s ease-in-out;
+    cursor: pointer;
+    box-shadow:
+      inset -2px -2px 4px 0 #0006,
+      inset 2px 2px 4px 0 #0008;
+
+    &:before {
+      content: "";
+      position: absolute;
+      inset: 0px;
+      background-color: var(--toggle-color);
+      z-index: -1;
+      filter: blur(30px) saturate(900%) opacity(0.5);
+    }
+  }
+
+  #toggle {
+    appearance: none;
+    visibility: hidden;
+
+    &:checked+.toggle {
+      transform: rotate(315deg);
+    }
+
+    &:checked~.circle-box {
+      transform: rotate(calc(360deg / 8 * var(--i)));
+    }
+  }
+
+  .circle-box {
+    position: absolute;
+    left: 0;
+    list-style-type: none;
+    transition: 0.5s;
+    transform-origin: 100px;
+    transition-delay: calc(0.1s * var(--i));
+    transform: rotate(0deg) translateX(70px);
+
+    &:nth-of-type(1) .anchor {
+      background: var(--item-1-gradient);
+    }
+
+    &:nth-of-type(2) .anchor {
+      background: var(--item-1-gradient);
+    }
+
+    &:nth-of-type(3) .anchor {
+      background: var(--item-1-gradient);
+    }
+
+    &:nth-of-type(4),
+    &:nth-of-type(5),
+    &:nth-of-type(6),
+    &:nth-of-type(7) {
+      visibility: hidden;
+    }
+
+    .anchor {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      line-height: 50px;
+      border-radius: 50%;
+      font-size: 1.5em;
+      text-decoration: none;
+      transform: rotate(calc(360deg / -8 * var(--i)));
+
+      &:hover {
+        &::before {
+          inset: -7px;
+        }
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        inset: 0px;
+        background-image: inherit;
+        border-radius: inherit;
+        z-index: -1;
+        filter: blur(30px) saturate(900%);
+        transition: inset 0.2s ease;
+      }
+    }
+  }
 }

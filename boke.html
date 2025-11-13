@@ -59,24 +59,6 @@
             <h3><span class="iconfont icon-rizhi"></span> 开发日志</h3>
             <!-- 日志1 -->
             <div class="dev-log-item">
-              <h4 class="log-title">CSS样式布局问题</h4>
-              <span class="log-date">2025-10-25</span>
-              <p class="log-content">在开发过程中遇到了CSS盒模型和定位的问题，特别是在响应式布局方面。</p>
-              <button class="detail-btn">查看详情 <span class="iconfont icon-jiantou1"></span></button>
-              <div class="log-solution" style="display: none;">
-                <h5 class="solution-title">解决步骤：</h5>
-                <ol class="solution-steps">
-                  <li>分析问题：识别不同屏幕尺寸下元素错位和溢出的具体表现</li>
-                  <li>查阅文档：学习CSS Grid和Flexbox布局的核心概念和属性</li>
-                  <li>重构布局：将传统的float布局替换为grid和flex组合方案</li>
-                  <li>添加媒体查询：针对不同断点设置合适的列数和间距</li>
-                  <li>测试验证：在多种设备和浏览器上进行兼容性测试</li>
-                  <li>优化调整：根据测试结果微调样式参数，确保视觉一致性</li>
-                </ol>
-              </div>
-            </div>
-            <!-- 日志2 -->
-            <div class="dev-log-item">
               <h4 class="log-title">JavaScript交互效果实现</h4>
               <span class="log-date">2025-10-27</span>
               <p class="log-content">为按钮和卡片添加悬停效果时，需要注意过渡动画的平滑性。</p>
@@ -93,7 +75,38 @@
                 </ol>
               </div>
             </div>
+            <!-- 日志2 -->
+            <div class="dev-log-item">
+              <h4 class="log-title">数据记录排序混乱问题</h4>
+              <span class="log-date">2025-11-12</span>
+              <p class="log-content">记录显示顺序混乱（最新的应该在最上面还是最下面？）</p>
+              <button class="detail-btn">查看详情 <span class="iconfont icon-jiantou1"></span></button>
+              <div class="log-solution" style="display: none;">
+                <h5 class="solution-title">解决步骤：</h5>
+                <ol class="solution-steps">
+                  <li>使用unshift()将新记录插入数组开头</li>
+                  <li>或用sort((a,b) => b.timestamp - a.timestamp)按时间戳倒序</li>
+                  <li>渲染时直接遍历数组，最新记录自然显示在顶部</li>
+                </ol>
+              </div>
+            </div>
             <!-- 日志3 -->
+            <div class="dev-log-item">
+              <h4 class="log-title">数据安全与访问控制问题</h4>
+              <span class="log-date">2025-11-12</span>
+              <p class="log-content">系统缺乏操作验证机制，存在未授权数据篡改风险，恶意用户可能随意增删学习记录，破坏数据完整性。</p>
+              <button class="detail-btn">查看详情 <span class="iconfont icon-jiantou1"></span></button>
+              <div class="log-solution" style="display: none;">
+                <h5 class="solution-title">解决步骤：</h5>
+                <ol class="solution-steps">
+                  <li>在执行提交或删除操作前触发验证流程</li>
+                  <li>通过模态对话框要求用户输入预设密钥</li>
+                  <li>建立验证中间件，仅在密码验证通过后执行数据操作</li>
+                  <li>验证失败时终止当前操作并提示错误信息</li>
+                  <li>p：在实际应用中，这种前端验证仍然可能被绕过，因此对于更敏感的操作，建议结合后端验证。但鉴于当前需求为前端功能，我们仅在前端实现。</li>
+                </ol>
+              </div>
+            </div>
           </div>
 
           <!-- 我的文章部分 -->
@@ -171,6 +184,7 @@
       </div>
     </div>
   </div>
+  <script src="js/boke.js"></script>
 
   <!-- 尾部 -->
   <footer class="footer ">
@@ -178,48 +192,5 @@
       <p>© 版权所有 2025 宁妍 的个人博客</p>
     </div>
   </footer>
-
-  <script>
-    // 获取所有详情按钮
-    const detailBtns = document.querySelectorAll('.detail-btn');
-    const articleDetailBtns = document.querySelectorAll('.article-detail-btn');
-
-    // 为开发日志详情按钮添加点击事件
-    detailBtns.forEach(btn => {
-      btn.addEventListener('click', function () {
-        // 找到对应的解决步骤容器
-        const solutionDiv = this.nextElementSibling;
-
-        // 切换显示状态
-        if (solutionDiv.style.display === 'none') {
-          solutionDiv.style.display = 'block';
-          this.classList.add('active');
-        } else {
-          solutionDiv.style.display = 'none';
-          this.classList.remove('active');
-        }
-      });
-    });
-
-    // 为文章详情按钮添加点击事件
-    articleDetailBtns.forEach(btn => {
-      btn.addEventListener('click', function () {
-        // 找到对应的完整内容容器 - 通过父元素查找
-        const articleItem = this.closest('.article-item');
-        const fullContentDiv = articleItem.querySelector('.article-full-content');
-
-        // 切换显示状态
-        if (fullContentDiv.style.display === 'none') {
-          fullContentDiv.style.display = 'block';
-          this.classList.add('active');
-          this.innerHTML = '收起内容 <span class="iconfont icon-jiantouyou"></span>';
-        } else {
-          fullContentDiv.style.display = 'none';
-          this.classList.remove('active');
-          this.innerHTML = '阅读全文 <span class="iconfont icon-jiantouyou"></span>';
-        }
-      });
-    });
-  </script>
 
 </html>

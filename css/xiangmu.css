@@ -13,7 +13,6 @@
 .project-title {
   text-align: center;
   font-size: 36px;
-  font-weight: bold;
   color: #aac7d9;
   margin: 10px 20px 40px 0;
 }
@@ -166,5 +165,45 @@
   .tag {
     padding: 6px 15px;
     font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .connect {
+    padding: 30px 20px;
+  }
+
+  .project-title {
+    font-size: 28px;
+  }
+
+  .project-name {
+    font-size: 20px;
+  }
+
+  .project-date {
+    font-size: 13px;
+  }
+
+  .project-conference {
+    font-size: 14px;
+  }
+
+  .project-authors {
+    font-size: 14px;
+  }
+
+  .project-description {
+    font-size: 14px;
+  }
+
+  .small-tag {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+
+  .detail-btn {
+    padding: 6px 12px;
+    font-size: 13px;
   }
 }
