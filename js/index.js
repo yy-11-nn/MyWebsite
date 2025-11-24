@@ -147,33 +147,40 @@ function addInitialRecords() {
     { date: '2025-10-17', content: 'CSS基础：选择器，文本样式' },
     { date: '2025-10-21', content: 'CSS布局：正常布局，flex布局，定位布局，网格布局，多列布局' },
     { date: '2025-10-26', content: 'JavaScript基础语法：数据类型，常量变量，运算符，语句，数组，函数对象' },
-    { date: '2025-11-03', content: 'web APIs中DOM与事件' },
-    { date: '2025-11-08', content: 'web APIs中BOM' }
+    { date: '2025-11-03', content: 'web APIs：DOM与事件' },
+    { date: '2025-11-08', content: 'web APIs：BOM' },
+    { date: '2025-11-13', content: 'CSS响应式布局：媒体查询，Bootstrap框架' },
+    { date: '2025-11-19', content: 'esc6：解构赋值，默认参数，剩余参数，箭头函数' },
+    { date: '2025-11-23', content: 'vue3基本语法' },
+    { date: '2025-11-24', content: 'vue3：路由' }
   ];
 
   let addedAny = false;
-  const existingRecords = JSON.parse(localStorage.getItem('studyRecords') || '[]');
-  
-  // 检查是否已有记录，如果没有则添加初始记录
-  if (existingRecords.length === 0) {
-    records.forEach(record => {
-      const added = saveRecordWithDate(record.date, record.content);
-      if (added) {
-        addedAny = true;
-        console.log(`已添加学习记录: ${record.date} ${record.content}`);
-      }
-    });
-    
-    if (addedAny) {
-      console.log('已添加所有初始学习记录');
+
+  // 检查每条记录是否存在，单独添加不存在的记录
+  records.forEach(record => {
+    const added = saveRecordWithDate(record.date, record.content);
+    if (added) {
+      addedAny = true;
+      console.log(`已添加学习记录: ${record.date} ${record.content}`);
     }
-  } else {
-    console.log('已有学习记录，跳过初始记录添加');
+  });
+
+  if (addedAny) {
+    console.log('已添加所有初始学习记录');
   }
+}
+
+// 清除localStorage中的现有记录（仅执行一次，后续可注释掉）
+function clearExistingRecords() {
+  localStorage.removeItem('studyRecords');
+  console.log('已清除现有学习记录');
 }
 
 // 页面加载时显示历史记录并添加初始记录
 window.addEventListener('load', function () {
+  // 临时清除现有记录，让新记录能够显示
+  clearExistingRecords();
   addInitialRecords();
   loadRecords();
 });
