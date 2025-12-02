@@ -152,7 +152,11 @@ function addInitialRecords() {
     { date: '2025-11-13', content: 'CSS响应式布局：媒体查询，Bootstrap框架' },
     { date: '2025-11-19', content: 'esc6：解构赋值，默认参数，剩余参数，箭头函数' },
     { date: '2025-11-23', content: 'vue3基本语法' },
-    { date: '2025-11-24', content: 'vue3：路由' }
+    { date: '2025-11-24', content: 'vue3：路由' },
+    { date: '2025-11-25', content: 'vue3：pinia组件' },
+    { date: '2025-11-26', content: 'vue3：组件通信' },
+    { date: '2025-11-27', content: 'typeScript基础' },
+    { date: '2025-12-2', content: 'git基本操作' }
   ];
 
   let addedAny = false;
